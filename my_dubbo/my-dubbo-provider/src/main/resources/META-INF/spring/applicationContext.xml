@@ -8,8 +8,8 @@
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:property-placeholder location="classpath:dataSource.properties"/>
 	<context:component-scan base-package="service.impl"/>
+	<context:property-placeholder location="classpath:dataSource.properties"/>
 
 	<!-- 阿里druid数据源配置 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">

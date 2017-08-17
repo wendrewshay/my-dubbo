@@ -1,7 +1,5 @@
 package dao;
 
-import org.springframework.stereotype.Repository;
-
 import domain.User;
 
 /**   
@@ -11,7 +9,6 @@ import domain.User;
  * @date: 2017年8月17日 上午10:48:11   
  *      
  */
-@Repository
 public interface UserDao {
 
 	public User findById(Long userid);
