@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.alibaba.dubbo.rpc.RpcContext;
+
 import dao.UserDao;
 import domain.User;
 import service.UserService;
@@ -31,6 +33,7 @@ public class UserServiceImpl implements UserService {
 	 * @see service.UserService#queryUserById(java.lang.Long)   
 	 */
 	public User queryUserById(Long userid) {
+		System.out.println(RpcContext.getContext().getLocalAddress() + " : queryUserById");
 		return userDao.findById(userid);
 	}
 
